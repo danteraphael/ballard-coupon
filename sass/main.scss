@@ -1,0 +1,107 @@
+@import "node_modules/mediaqueries-sass-mixin/mediaqueries-sass-mixin";
+// see https://www.npmjs.com/package/mediaqueries-sass-mixin
+
+// Add custom mixins
+@import "_partials/mixins";
+
+// Base font size to convert from px to rem
+$mq-font-size: 16px !default;
+
+// Default media type
+$mq-media-type: 'screen' !default;
+
+// Default breakpoints
+$mq-breakpoints: (
+    small: 544px,
+    medium: 768px,
+    large: 1024px,
+    xlarge: 1200px,
+    xxlarge: 1440px,
+) !default;
+
+$color-base: #665546;
+$color-highlight: #665546;
+$color-background: #f8f8f0;
+$sans-serif: "Montserrat",Verdana,Helvetica,sans-serif;
+$serif: "Cormorant",Times,"Times New Roman",serif;
+
+
+.lp-coupon {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.lp-coupon__container {
+  display: flex;
+  border: 2px dashed $color-highlight;
+  color: $color-base;
+  padding: 12px;
+  margin: 16px;
+  text-align: center;
+
+  @include breakpoint(small) {
+    padding: 28px;
+    margin: 1em 0;
+  }
+}
+
+.lp-coupon__image {
+
+  @include visually-hidden;
+
+  @include breakpoint(small) {
+    @include visually-show;
+    width: 202px;
+    height: 202px;
+  }
+}
+
+.lp-coupon__offer {
+  flex: 1;
+  display: flex;
+  padding: 13px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lp-coupon--paper {
+  background-color: $color-background;
+}
+
+.lp-coupon__title {
+  font-size: 3rem;
+  @include breakpoint(small) {
+    font-size: 4rem;
+  }
+}
+
+.lp-coupon__subtitle {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: lighter;
+
+  @include breakpoint(small) {
+    font-size: 2rem;
+  }
+}
+
+.btn.lp-coupon--btn {
+  background-color: $color-base;
+  color: #ffffff;
+  border-color: $color-base;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.lp-coupon__legal,
+.lp-coupon__link {
+  font-size: 1rem;
+}
+.lp-coupon__legal {
+  margin-top: 20px;
+}
+
+.lp-coupon__link {
+  text-decoration: underline;
+}

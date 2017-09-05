@@ -1,0 +1,110 @@
+/**
+ * Mediaqueries Sass Mixin
+ * Author Javier Puche Victoria
+ * Version 1.2.1
+ * https://github.com/javipuche/mediaqueries-sass-mixin
+ * Licensed under MIT Open Source
+ */
+/**
+ * Default config
+ */
+/**
+ * Px to Em [Function]
+ */
+/**
+ * Map Next Value [Function]
+ * Get Next value from sass map
+ */
+/**
+ * Breakpoint Type [Function]
+ * Check if a value is a key map, number or direction
+ */
+/**
+ * Breakpoint [Function]
+ * Check selected Breakpoint
+ */
+/**
+ * Breakpoint [Mixin]
+ * Return media query
+ */
+.lp-coupon {
+  max-width: 950px;
+  margin: 0 auto; }
+
+.lp-coupon__container {
+  display: flex;
+  border: 2px dashed #665546;
+  color: #665546;
+  padding: 12px;
+  margin: 16px;
+  text-align: center; }
+  @media screen and (min-width: 34em) {
+    .lp-coupon__container {
+      padding: 28px;
+      margin: 1em 0; } }
+
+.lp-coupon__image {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+  @media screen and (min-width: 34em) {
+    .lp-coupon__image {
+      position: initial;
+      clip: auto;
+      /* IE6, IE7 */
+      clip: auto;
+      padding: initial;
+      border: 0;
+      height: initial;
+      width: initial;
+      overflow: initial;
+      width: 202px;
+      height: 202px; } }
+
+.lp-coupon__offer {
+  flex: 1;
+  display: flex;
+  padding: 13px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.lp-coupon--paper {
+  background-color: #f8f8f0; }
+
+.lp-coupon__title {
+  font-size: 3rem; }
+  @media screen and (min-width: 34em) {
+    .lp-coupon__title {
+      font-size: 4rem; } }
+
+.lp-coupon__subtitle {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: lighter; }
+  @media screen and (min-width: 34em) {
+    .lp-coupon__subtitle {
+      font-size: 2rem; } }
+
+.btn.lp-coupon--btn {
+  background-color: #665546;
+  color: #ffffff;
+  border-color: #665546;
+  cursor: pointer;
+  text-transform: uppercase; }
+
+.lp-coupon__legal,
+.lp-coupon__link {
+  font-size: 1rem; }
+
+.lp-coupon__legal {
+  margin-top: 20px; }
+
+.lp-coupon__link {
+  text-decoration: underline; }
