@@ -1,0 +1,21 @@
+@mixin visually-hidden { //https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0;
+    border:0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+@mixin visually-show {
+    position: initial;
+    clip: auto; /* IE6, IE7 */
+    clip: auto;
+    padding: initial;
+    border: 0;
+    height: initial;
+    width: initial;
+    overflow: initial;
+}
